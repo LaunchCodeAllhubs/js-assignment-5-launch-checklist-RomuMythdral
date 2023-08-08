@@ -38,11 +38,11 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let fuelStatus = document.getElementById("fuelStatus");
     let cargoStatus = document.getElementById("cargoStatus");
     if ((validateInput(pilot) == "Empty") || (validateInput(copilot) == "Empty") || (validateInput(fuelLevel) == "Empty") || (validateInput(cargoLevel) == "Empty")) {
-        document.alert("Please make sure all fields are filled out.")
+        alert("Please make sure all fields are filled out.")
     } else if (validateInput(pilot) == "Is a Number" || validateInput(copilot) == "Is a Number"){
-        document.alert("Make sure you're typing the pilot and copilot's name instead of a number.")
+        alert("Make sure you're typing the pilot and copilot's name instead of a number.")
     } else if (validateInput(fuelLevel) == "Not a Number" || validateInput(cargoLevel) == "Not a Number"){
-        document.alert("That is not a number in your fuel level and(or) cargo level. Please fix.")
+        alert("That is not a number in your fuel level and(or) cargo level. Please fix.")
     } else {
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
